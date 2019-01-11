@@ -1,0 +1,27 @@
+{
+	"name": "dimitarnestorov.com",
+	"version": "0.0.0",
+	"repository": "git@github.com:dimitarnestorov/dimitarnestorov.github.io.git",
+	"author": "Dimitar Nestorov <opensource@dimitarnestorov.com>",
+	"license": "MIT",
+	"private": true,
+	"scripts": {
+		"rm-dist": "rimraf ./dist",
+		"rm-main.js": "rimraf ./dist/main.js",
+		"build-webpack-dev": "webpack-cli --mode development",
+		"build-webpack-prod": "webpack-cli --mode production",
+		"build": "yarn run rm-dist && yarn run build-webpack-dev && yarn run rm-main.js",
+		"build-prod": "yarn run rm-dist && yarn run build-webpack-prod && yarn run rm-main.js",
+		"start": "webpack-dev-server --mode development",
+		"watch": "yarn run rm-dist && yarn run build-webpack-dev --watch"
+	},
+	"devDependencies": {
+		"extract-loader": "^3.1.0",
+		"file-loader": "^3.0.1",
+		"html-loader": "^0.5.5",
+		"url-loader": "^1.1.2",
+		"webpack": "^4.28.4",
+		"webpack-cli": "^3.2.1",
+		"webpack-dev-server": "^3.1.14"
+	}
+}

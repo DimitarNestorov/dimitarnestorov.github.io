@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Dimitar Nestorov</title>
+	<style type="text/css">
+		html {
+			font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, sans-serif;
+			font-size: 8px;
+			height: 100%;
+		}
+
+		body {
+			margin: 0;
+			padding: 0;
+			height: 100%;
+			position: relative;
+		}
+
+		#__BACKGROUND__, #__AVATAR__ {
+			background-image: url('${require("url-loader!./profile.jpg")}')
+		}
+
+		#__BACKGROUND__ {
+			width: 100%;
+			height: 100%;
+			background-position: 50% 50%;
+			background-size: cover;
+			filter: blur(5em) saturate(180%);
+			opacity: 0.5;
+			z-index: 1;
+		}
+
+		body::after {
+			content: '';
+			background-color: #fff;
+			opacity: 0.8;
+			z-index: 2;
+		}
+
+		#__CONTAINER__ {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			z-index: 3;
+		}
+
+		body::after, #__CONTAINER__ {
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+			position: absolute;
+		}
+
+		#__AVATAR__ {
+			width: 16em;
+			height: 16em;
+			border-radius: 50%;
+			background-size: 100%;
+			align-self: center;
+		}
+
+		h1 {
+			color: #111;
+			font-weight: 700;
+			margin-top: 3rem;
+			margin-bottom: 3em;
+			font-size: 5em;
+			text-align: center;
+		}
+
+		#__SOCIAL__ {
+			display: flex;
+			justify-content: center;
+		}
+
+		a > svg > path, a > svg > rect, a > svg > circle {
+			transition: fill 300ms ease;
+			fill: #8e8e93;
+		}
+
+		a#__EMAIL__:hover > svg > path {
+			fill: #D04033;
+		}
+
+		a#__TWITTER__:hover > svg > path {
+			fill: #1A97F1;
+		}
+
+		a#__GITHUB__:hover > svg > path {
+			fill: #000;
+		}
+
+		a#__LINKEDIN__:hover > svg > path {
+			fill: #0070AC;
+		}
+
+		a#__PATREON__:hover > svg > circle {
+			fill: #F75C4A;
+		}
+
+		a#__PATREON__:hover > svg > rect {
+			fill: #000;
+		}
+
+		svg {
+			display: block;
+			width: 4em;
+			height: 4em;
+			margin: 0 2em;
+		}
+	</style>
+</head>
+<body>
+	<div id="__BACKGROUND__"></div>
+	<div id="__CONTAINER__">
+		<div id="__AVATAR__"></div>
+		<h1>Dimitar Nestorov</h1>
+		<div id="__SOCIAL__">
+			<a id="__TWITTER__" href="https://twitter.com/dimitarnestorov" title="Follow me on Twitter" target="_blank">${require('./icons/twitter.svg')}</a>
+			<a id="__GITHUB__" href="https://github.com/dimitarnestorov" title="Check out my GitHub" target="_blank">${require('./icons/github.svg')}</a>
+			<a id="__EMAIL__" href="#" title="Send me an email">${require('./icons/email.svg')}</a>
+			<a id="__LINKEDIN__" href="https://www.linkedin.com/in/dimitarnestorov/" title="Connect with me on LinkedIn" target="_blank">${require('./icons/linkedin.svg')}</a>
+			<a id="__PATREON__" href="https://www.patreon.com/dimitarnestorov" title="Become a patron" target="_blank">${require('./icons/patreon.svg')}</a>
+		</div>
+	</div>
+	<script type="text/javascript">
+		setTimeout(function () {
+			document.getElementById('__EMAIL__').href = "mailto:gmail@dimitarnestorov.com"
+		})
+	</script>
+</body>
+</html>
