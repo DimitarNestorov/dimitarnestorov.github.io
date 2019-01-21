@@ -13,7 +13,8 @@
 		"build": "yarn run rm-dist && yarn run build-webpack-dev && yarn run rm-main.js",
 		"build-prod": "yarn run rm-dist && yarn run build-webpack-prod && yarn run rm-main.js",
 		"start": "webpack-dev-server --mode development",
-		"watch": "yarn run rm-dist && yarn run build-webpack-dev --watch"
+		"watch": "yarn run rm-dist && yarn run build-webpack-dev --watch",
+		"test": "exit 0"
 	},
 	"devDependencies": {
 		"extract-loader": "^3.1.0",
