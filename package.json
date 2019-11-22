@@ -18,7 +18,7 @@
 	},
 	"devDependencies": {
 		"extract-loader": "^3.1.0",
-		"file-loader": "^4.2.0",
+		"file-loader": "^4.3.0",
 		"html-loader": "^0.5.5",
 		"url-loader": "^2.2.0",
 		"webpack": "^4.41.2",
