@@ -1339,10 +1339,10 @@ extglob@^2.0.4:
     snapdragon "^0.8.1"
     to-regex "^3.0.1"
 
-extract-loader@^4.0.0:
-  version "4.0.0"
-  resolved "https://registry.yarnpkg.com/extract-loader/-/extract-loader-4.0.0.tgz#f9a712fdef3b735452ba3fa45c04c48c21ff135c"
-  integrity sha512-IUIHaKQqFcnEF0ySN68XAP2okIBCp5UuRZ4ljBRGPavjaCOlzgkIW364yemPVJg0wHhKLENZvgAdQbYbPtiHog==
+extract-loader@^4.0.1:
+  version "4.0.1"
+  resolved "https://registry.yarnpkg.com/extract-loader/-/extract-loader-4.0.1.tgz#977ad145e1d6591b32513da6a9628546e673b1ec"
+  integrity sha512-zwr+FKM7mtzcdHUDQ+23J3HGez9DSPdS8/URNDefr6ObFBJNIpIRUUrpbVBbTXzgcOnDRg+dZDVJL+P1YjPR/A==
   dependencies:
     babel-runtime "^6.26.0"
     btoa "^1.2.1"
