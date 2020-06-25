@@ -22,6 +22,7 @@
 			font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, sans-serif;
 			font-size: 8px;
 			height: 100%;
+			background-color: #000;
 		}
 
 		body {
@@ -47,7 +48,7 @@
 
 		body::after {
 			content: '';
-			background-color: #fff;
+			background-color: #000;
 			opacity: 0.8;
 			z-index: 2;
 		}
@@ -77,12 +78,13 @@
 		}
 
 		h1 {
-			color: #111;
+			color: #CCC;
 			font-weight: 700;
 			margin-top: 3rem;
 			margin-bottom: 3em;
 			font-size: 5em;
 			text-align: center;
+			padding: 0 1em;
 		}
 
 		#__SOCIAL__ {
@@ -99,7 +101,11 @@
 			fill: #D04033;
 		} */
 
-		a#__TWITTER__:hover > svg > path {
+		a:hover > svg > path {
+			fill: #FFF;
+		}
+
+		/* a#__TWITTER__:hover > svg > path {
 			fill: #1A97F1;
 		}
 
@@ -109,7 +115,7 @@
 
 		a#__LINKEDIN__:hover > svg > path {
 			fill: #0070AC;
-		}
+		} */
 
 		/* a#__PATREON__:hover > svg > circle {
 			fill: #F75C4A;
