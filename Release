@@ -1,0 +1,8 @@
+Origin: Dimitar Nestorov
+Label: Dimitar Nestorov
+Suite: stable
+Version: 1.0
+Codename: ios
+Architectures: iphoneos-arm
+Components: main
+Description: Dimitar Nestorov's Tweak Repository
