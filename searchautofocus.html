@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>SearchAutoFocus — Dimitar Nestorov</title>
+	<style>
+		html {
+			background-color: black;
+			color: white;
+			font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+		}
+
+		body {
+			margin: 0;
+		}
+
+		.title {
+			margin: 16px 0;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+
+		.titles {
+			margin: 0 0 0 8px;
+			text-align: center;
+		}
+
+		.titles > h1 {
+			font-size: 24px;
+			margin: 0;
+		}
+
+		.titles > h2 {
+			font-size: 12px;
+			margin: 0;
+			font-weight: 400;
+		}
+
+		a {
+			color: #1687e9;
+		}
+
+		.info, .links {
+			background-color: #222222;
+			max-width: 90%;
+			width: 400px;
+			margin: 0 auto;
+			border-radius: 16px;
+			font-size: 15px;
+		}
+
+		.info {
+			padding: 6px 0;
+		}
+
+		.info > p {
+			padding: 0 16px;
+			margin: 8px 0;
+		}
+
+		.info > ul {
+			padding: 0 16px 0 40px;
+			margin: 8px 0;
+		}
+
+		.beforeAfter {
+			max-width: 100%;
+			padding-top: 244.6%;
+			position: relative;
+		}
+
+		.beforeAfter::after {
+			content: '';
+			background-image: url('/searchautofocus-before-after.png');
+			background-size: contain;
+			background-repeat: no-repeat;
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			top: 0;
+		}
+
+		.space {
+			height: 16px;
+		}
+
+		.links > a {
+			height: 44px;
+			padding: 0 16px;
+			display: flex;
+			align-items: center;
+			border-bottom: 1px solid #333;
+		}
+
+		.links > a:last-child {
+			border-bottom: 0 none;
+		}
+
+		.links > a::before {
+			content: '';
+			background-image: attr(data-image url);
+			background-repeat: no-repeat;
+			background-size: contain;
+			width: 29px;
+			height: 29px;
+			margin-right: 16px;
+		}
+
+		.links > a.paypal::before {
+			background-image: url('/PayPal@3x.png');
+		}
+		.links > a.github::before {
+			background-image: url('/GitHub@3x.png');
+		}
+		.links > a.discord::before {
+			background-image: url('/Discord@3x.png');
+		}
+		.links > a.twitter::before {
+			background-image: url('/Twitter@3x.png');
+		}
+	</style>
+</head>
+<body>
+	<div class="title">
+		<img src="./searchautofocus.png" width="48" height="48" alt="SearchAutoFocus icon">
+		<div class="titles">
+			<h1>SearchAutoFocus</h1>
+			<h2>Automatically focus the search bar</h2>
+		</div>
+	</div>
+	<div class="info">
+		<div class="beforeAfter"></div>
+
+		<p>SearchAutoFocus aims to save you from that annoying tap near the top of the screen when visiting the search tab. Currently it only supports the stock UI, but support for custom implementations like Cydia and Spotify will be added in the future.</p>
+
+		<p>Depends on libsparkapplist which is available on <a href="https://repo.dynastic.co/">https://repo.dynastic.co/</a> and <a href="https://sparkdev.me/">https://sparkdev.me/</a></p>
+
+		<p>By default it’s enabled for a bunch of stock apps and a couple of third party apps that seem to work fine. To prevent any janky user experience you have to enable it yourself for every app you want to use it with.</p>
+
+		<p>Known issues:</p>
+		<ul>
+			<li>Doesn’t work with Cydia, Installer, Spotify, social media apps, and others, post app requests <a href="https://github.com/dimitarnestorov/SearchAutoFocus/issues/1">here</a></li>
+			<li>Doesn’t work first time you visit the search tab for TV and Books (iOS 13)</li>
+			<li>Janky experience with Files app</li>
+			<li>Doesn’t work with iOS 11 stock apps (iOS 12 status is unknown)</li>
+		</ul>
+	</div>
+
+	<div class="space"></div>
+
+	<div class="links">
+		<a href="https://www.paypal.me/DimitarNestorov" class="paypal">PayPal</a>
+		<a href="https://discord.gg/caPYtsN" class="discord">Discord</a>
+		<a href="https://twitter.com/dimitarnestorov" class="twitter">Twitter</a>
+		<a href="https://github.com/dimitarnestorov/SearchAutoFocus" class="github">GitHub</a>
+	</div>
+
+	<div class="space"></div>
+</body>
+</html>
